@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 40;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  }
+  
+
+html {
+  background-image: url(https://s1.1zoom.me/b5050/342/Geometry_Texture_Blue_Light_Blue_White_background_586221_2560x1440.jpg);
+
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: left;
+  font-size: 50px;
+}
+
+h3 {
+  text-align: left;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+p {
+ font-size: 30px;
+}
+
+body {
+  font-family: Product Sans;
+  font-size: 35px;
+  padding: 20px;
+
+}
+
+input[type=text], input[type=password] {
+  font-family: Product Sans;
+  width: 97%;
+  padding: 15px;
+  margin: 10px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(83, 83, 83, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-collapse: collapse;
+}
+
+
+
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: Product Sans;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #89d0ee;
+  box-shadow: 0px 15px 20px rgba(137,208,238,255);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  background-color: #6fc8ee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.container {
+  font-family: Product Sans;
+  padding: 15px;
+  color: rgb(70, 70, 70);
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.registerbtn {
+  width: 240px;
+  height: 50px;
+  font-family: Product Sans;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: rgb(247, 245, 245);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.registerbtn:hover {
+  background-color: #89d0ee;
+  box-shadow: 0px 15px 20px rgba(137,208,238,255);
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-7px);
+}
+
+.registerbtn:active {
+  background-color: #6fc8ee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.header {
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+.Menu {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}

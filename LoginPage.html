@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="static/styles.css">
+
+</head>
+
+
+<body>
+    <div class="header">
+        <h2>Login</h2> 
+        <form action="/home">
+            <button class="button">Home</button>
+        </form>
+    </div>
+
+    <h3>Please fill in this form to log into your account.</h3>
+
+    <div class="container">
+    
+        <label for="email"><b>Email</b></label> <br>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required/>
+        <br>
+    
+        <label for="psw"><b>Password</b></label> <br>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required/>
+        <br>
+    
+        <button type="submit" class="registerbtn">Login</button>
+      </div>
+
+      <p>Don't have an Account?</p>
+      <form action="/Register">
+        <button class="button">Register</button>
+      </form>
+
+</body>
