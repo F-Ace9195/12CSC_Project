@@ -148,3 +148,34 @@ table {
   align-items:center;
   justify-content: center;
 }
+
+input {
+  width: 140px;
+  height: 45px;
+  font-family: Product Sans;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #89d0ee;
+  box-shadow: 0px 15px 20px rgba(137,208,238,255);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  background-color: #6fc8ee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

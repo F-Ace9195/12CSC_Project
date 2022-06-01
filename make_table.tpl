@@ -19,11 +19,16 @@ form {
 </style>
 
 <body>
-    <h1>Welcome Ryan</h1>
+
+    <div class = "container">
+        <h1>Welcome Quandale Dingleberry Cornelious the 3rd</h1>
+    </div>
+
+    <br>
     
     <div class="Menu">
 
-        <form action="">
+        <form action="/new">
             <button class="button">New Task</button>
         </form>
 
@@ -59,34 +64,34 @@ form {
 </body>
 
 <style>
+    .container h1 {
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
     .container {
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
-        width: 50%;
-        display: flex;
-        justify-content: center;
+        width: 80%;
+
     }
 
     table {
-        width: 50%;
-        margin-left: auto;
-        display: flex;
-        justify-content: center;
+        width: 100%;
         margin-top: 10px;
-        margin-right: auto;
         border-collapse: collapse;
         border: 4px solid #000000;
-        border-radius: 6px;
-        margin-left: auto;
-        margin-right: auto;
+        border-radius: 15px;
         position: relative;
         border-collapse: collapse;
     }
     
     table tr {
         border-collapse: collapse;
-        font-family: open-sans,sans-serif;
+        font-family: Product Sans;
         border: 1px solid #000000;
         font-weight: 400;
         font-style:normal;
@@ -96,6 +101,7 @@ form {
 
     table td {
         border-collapse: collapse;
+        font-size: 25px;
         border: 1px solid #000000;
         border-style:solid;
     }
@@ -110,7 +116,7 @@ form {
         text-align: left;
         background-color: #0491aa;
         color: rgb(0, 0, 0);
-        font-family: open-sans, sans-serif;
+        font-family: Product Sans;
         font-weight: 300;
         font-style: normal;
     }
