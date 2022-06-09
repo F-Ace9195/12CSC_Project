@@ -63,6 +63,15 @@ form {
 
 </body>
 
+<script>
+function dropdown() {
+
+window.location=document.getElementById("UserSelect").value
+
+}
+
+</script>
+
 <style>
     .container h1 {
         background-color: white;

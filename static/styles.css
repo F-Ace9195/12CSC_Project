@@ -154,13 +154,14 @@ input {
   height: 45px;
   font-family: Product Sans;
   font-size: 13px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 1.5px;
   font-weight: 500;
   color: #000;
   background-color: #fff;
   border: none;
   border-radius: 10px;
+
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
