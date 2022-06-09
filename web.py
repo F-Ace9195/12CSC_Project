@@ -58,7 +58,31 @@ def new_item():
         return template('new_task.html')
 
 
+@route('/edit/<no:int>', method='GET')
+def edit_item(no):
 
+    if request.GET.save:
+        edit = request.GET.task.strip()
+        status = request.GET.status.strip()
+
+        if status == 'open':
+            status = 1
+        else:
+            status = 0
+
+        conn = sqlite3.connect('list.db')
+        c = conn.cursor()
+        c.execute("UPDATE todo SET task = ?, status = ? WHERE id LIKE ?", (edit, status, no))
+        conn.commit()
+
+        return template("edittasksuccess.html",no=no)
+    else:
+        conn = sqlite3.connect('list.db')
+        c = conn.cursor()
+        c.execute("SELECT task FROM todo WHERE id LIKE ?", (str(no),))
+        cur_data = c.fetchone()
+
+        return template('edit_task.html', old=cur_data, no=no)
 
 debug(True)
 run(reloader=True)

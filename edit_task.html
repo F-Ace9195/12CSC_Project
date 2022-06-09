@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+
+<h1>Edit the task with the ID of {{no}}</h1>
+<form action="/edit/{{no}}" method="get">
+  <input type="text" name="task" value="{{old[0]}}" size="100" maxlength="100">
+  <select name="status">
+    <option>open</option>
+    <option>closed</option>
+  </select>
+  <br>
+  <input type="submit" name="save" value="save">
+</form>
