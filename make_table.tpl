@@ -32,7 +32,7 @@ form {
             <button class="button">New Task</button>
         </form>
 
-        <form action="">
+        <form action="/edit">
             <button class="button">Edit Tasks</button>
         </form>
 

@@ -32,6 +32,9 @@ def task_list():
     output = template('make_table.tpl', rows=result)
     return output
 
+@route('/edit')
+def edit():
+    return template("edtaskchoose.html")
 
 
 
@@ -83,6 +86,10 @@ def edit_item(no):
         cur_data = c.fetchone()
 
         return template('edit_task.html', old=cur_data, no=no)
+
+
+
+
 
 debug(True)
 run(reloader=True)
