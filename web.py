@@ -36,6 +36,10 @@ def task_list():
 def edit():
     return template("edtaskchoose.html")
 
+@route("/delete")
+def delete():
+    return template("deltaskchoose.html")
+
 
 
 @route('/new', method='GET')
@@ -87,10 +91,35 @@ def edit_item(no):
 
         item_inval = "Invalid"
         if not cur_data:
-            return template("RegisterPage.html")
+            return template("InvalOpt.html",no=no)
 
 
         return template('edit_task.html', old=cur_data, no=no)
+
+@route('/delete/<no:int>', method='GET')
+def delete_item(no):
+
+    if request.GET.save:
+        edit = request.GET.task.strip()
+
+        conn = sqlite3.connect('list.db')
+        c = conn.cursor()
+        c.execute("DELETE FROM todo WHERE id LIKE ?", (no,))
+        conn.commit()
+
+        return template("deltasksuccess.html",no=no)
+    else:
+        conn = sqlite3.connect('list.db')
+        c = conn.cursor()
+        c.execute("SELECT task FROM todo WHERE id LIKE ?", (str(no),))
+        cur_data = c.fetchone()
+
+        item_inval = "Invalid"
+        if not cur_data:
+            return template("InvalOpt",no=no)
+
+
+        return template('del_task.html', old=cur_data, no=no)
 
 
 

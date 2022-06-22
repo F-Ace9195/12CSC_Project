@@ -36,7 +36,7 @@ form {
             <button class="button">Edit Tasks</button>
         </form>
 
-        <form action="">
+        <form action="/delete">
             <button class="button">Remove tasks</button>
         </form>
 

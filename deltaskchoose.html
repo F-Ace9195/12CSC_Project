@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+     <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<div class="center">
+    <div id="chooseItem">
+        <h3>Choose which item # you would like to Delete:</h3>
+            <h3>Item No#:</h3>
+            
+            <select class="UserSelect" title="Choose which item number to delete" id="UserSelect" class="center" size="1" required>
+                <br>
+                <optgroup label="To-Do List #1"></optgroup>
+                <option value="/delete/1">1</option>
+                <option value="/delete/2">2</option>
+                <option value="/delete/3">3</option>
+                <option value="/delete/4">4</option>
+                <option value="/delete/5">5</option>
+                <option value="/delete/6">6</option>
+                <option value="/delete/7">7</option>
+                <option value="/delete/8">8</option>
+                <option value="/delete/9">9</option>
+                <option value="/delete/10">10</option>
+                <option value="/delete/11">11</option>
+                <option value="/delete/12">12</option>
+                <option value="/delete/13">13</option>
+                <option value="/delete/14">14</option>
+                <option value="/delete/15">15</option>
+                <option value="/delete/16">16</option>
+                <option value="/delete/17">17</option>
+                <option value="/delete/18">18</option>
+                <option value="/delete/19">19</option>
+                <option value="/delete/20">20</option>
+                <option value="/delete/21">21</option>
+                <option value="/delete/22">22</option>
+                <option value="/delete/23">23</option>
+                <option value="/delete/24">24</option>
+                <option value="/delete/25">25</option>
+                <option value="/delete/26">26</option>
+                <option value="/delete/27">27</option>
+                <option value="/delete/28">28</option>
+                <option value="/delete/29">29</option>
+                <option value="/delete/30">30</option>
+            </select>
+    </div>
+
+
+<br>
+<input type="submit" name="submit"  title="Confirm delete item choice"  class="saveButtonSmall" value="Submit" onclick="go()">
+
+ 
+
+<script>
+
+function go() {
+window.location=document.getElementById("UserSelect").value
+}
+
+</script>
