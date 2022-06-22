@@ -8,7 +8,9 @@
     <div id="chooseItem">
         <h3> Please choose which item # you would like to edit:</h3>
             <label>Item No#:</label>
+            
             <select class="UserSelect" title="Choose which item number to edit" id="UserSelect" class="center" size="1" required>
+                <br>
                 <optgroup label="To-Do List #1"></optgroup>
                 <option value="/edit/1">1</option>
                 <option value="/edit/2">2</option>
@@ -40,4 +42,19 @@
                 <option value="/edit/28">28</option>
                 <option value="/edit/29">29</option>
                 <option value="/edit/30">30</option>
+            </select>
+    </div>
 
+
+<br>
+<input type="submit" name="submit"  title="Confirm edit item choice"  class="saveButtonSmall" value="Submit" onclick="go()">
+
+ 
+
+<script>
+
+function go() {
+window.location=document.getElementById("UserSelect").value
+}
+
+</script>

@@ -85,6 +85,11 @@ def edit_item(no):
         c.execute("SELECT task FROM todo WHERE id LIKE ?", (str(no),))
         cur_data = c.fetchone()
 
+        item_inval = "Invalid"
+        if not cur_data:
+            return template("RegisterPage.html")
+
+
         return template('edit_task.html', old=cur_data, no=no)
 
 
