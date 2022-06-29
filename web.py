@@ -122,8 +122,5 @@ def delete_item(no):
         return template('del_task.html', old=cur_data, no=no)
 
 
-
-
-
 debug(True)
 run(reloader=True)

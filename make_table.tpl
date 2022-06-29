@@ -17,11 +17,10 @@ form {
 }
 
 </style>
-
 <body>
 
     <div class = "container">
-        <h1>Welcome Quandale Dingleberry Cornelious the 3rd</h1>
+        <h1>Welcome</h1>
     </div>
 
     <br>
