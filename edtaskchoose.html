@@ -5,13 +5,14 @@
 </head>
 
 <div class="center">
-    <div id="chooseItem">
+    <div id="myDropdown" class="dropdown-content">
         <h3> Please choose which item # you would like to edit:</h3>
             <label>Item No#:</label>
             
             <select class="UserSelect" title="Choose which item number to edit" id="UserSelect" class="center" size="1" required>
                 <br>
                 <optgroup label="To-Do List #1"></optgroup>
+                
                 <option value="/edit/1">1</option>
                 <option value="/edit/2">2</option>
                 <option value="/edit/3">3</option>
@@ -55,6 +56,22 @@
 
 function go() {
 window.location=document.getElementById("UserSelect").value
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
 }
 
 </script>
