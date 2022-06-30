@@ -19,6 +19,10 @@ def register():
 def login():
     return template("LoginPage.html")
 
+@route("/drop")
+def drop():
+    return template("Drop.html")
+
 @route('/list')
 def task_list():
 
@@ -66,16 +70,10 @@ def edit_item(no):
 
     if request.GET.save:
         edit = request.GET.task.strip()
-        status = request.GET.status.strip()
-
-        if status == 'open':
-            status = 1
-        else:
-            status = 0,
 
         conn = sqlite3.connect('list.db')
         c = conn.cursor()
-        c.execute("UPDATE todo SET task = ?, status = ? WHERE id LIKE ?", (edit, status, no))
+        c.execute("UPDATE todo SET task = ? WHERE id LIKE ?", (edit, no))
         conn.commit()
 
         return template("edittasksuccess.html",no=no)
