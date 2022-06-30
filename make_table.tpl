@@ -16,6 +16,10 @@ form {
     display:inline-flex;
 }
 
+input[type=text] {
+    width:20%;
+}
+
 </style>
 <body>
 
@@ -26,6 +30,8 @@ form {
     <br>
     
     <div class="Menu">
+
+        
 
         <form action="/new">
             <button class="button">New Task</button>
@@ -39,12 +45,16 @@ form {
             <button class="button">Remove tasks</button>
         </form>
 
+        
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
     </div>
 
     <div class = "container">
 
 
-    <table class = border = 1>
+    <table class = border = 1 id="myTable">
     <th>#Num</th>
 
     <th>Description</th>
@@ -136,3 +146,24 @@ window.location=document.getElementById("UserSelect").value
 
 
 </style>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>

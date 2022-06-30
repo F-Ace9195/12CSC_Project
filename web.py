@@ -2,7 +2,6 @@ from bottle import app, route, get, post, request, template, run, debug, static_
 import sqlite3
 import time
 
-
 @route('/static/<filepath:path>')
 def server_static(filepath):
     return static_file(filepath, root="H:/12CSC_Project/static")
@@ -40,8 +39,6 @@ def edit():
 def delete():
     return template("deltaskchoose.html")
 
-
-
 @route('/new', method='GET')
 def new_item():
 
@@ -64,7 +61,6 @@ def new_item():
     else:
         return template('new_task.html')
 
-
 @route('/edit/<no:int>', method='GET')
 def edit_item(no):
 
@@ -75,7 +71,7 @@ def edit_item(no):
         if status == 'open':
             status = 1
         else:
-            status = 0
+            status = 0,
 
         conn = sqlite3.connect('list.db')
         c = conn.cursor()
