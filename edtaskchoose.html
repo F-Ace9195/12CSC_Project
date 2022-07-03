@@ -7,8 +7,13 @@
 </head>
 <body>
 
-<h2>Search/Filter Dropdown</h2>
-<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+<div class = "container">
+  <h1>Choose a task to edit</h1>
+  <p>Click on the button to open the dropdown menu, and use the input field to search for a specific task.</p>
+</div>
+
+<br>
+
 
 <div class="dropdown">
   <button onclick="myFunction()" class="button">Dropdown</button>
@@ -47,6 +52,7 @@
   </div>
 </div>
 
+
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -74,6 +80,14 @@ function filterFunction() {
 </body>
 
 <style>
+
+input[type=text] {
+  padding: 2px;
+  margin:auto;
+
+}
+  
+
 
 .button {
   background-color: #ffffff;
@@ -111,19 +125,43 @@ function filterFunction() {
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
-  overflow: auto;
+  max-height:400px;
+  overflow:auto; 
   border: 1px solid #ddd;
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 10px 18px;
   text-decoration: none;
   display: block;
 }
 
+.dropdown-content::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #1b6b9e 0%, #89d0ee 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
+.dropdown-content::-webkit-scrollbar {
+  width: 20px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
 .dropdown a:hover {background-color: #ddd;}
+
+.hidden {
+  overflow: auto;
+}
+
+a {
+  font-size: 24px;
+}
 
 .show {display: block;}
 </style>
