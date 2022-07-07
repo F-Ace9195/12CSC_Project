@@ -4,57 +4,163 @@
      <link rel="stylesheet" href="/static/styles.css">
 </head>
 
-<div class="center">
-    <div id="chooseItem">
-        <h3>Choose which item # you would like to Delete:</h3>
-            <h3>Item No#:</h3>
-            
-            <select class="UserSelect" title="Choose which item number to delete" id="UserSelect" class="center" size="1" required>
-                <br>
-                <optgroup label="To-Do List #1"></optgroup>
-                <option value="/delete/1">1</option>
-                <option value="/delete/2">2</option>
-                <option value="/delete/3">3</option>
-                <option value="/delete/4">4</option>
-                <option value="/delete/5">5</option>
-                <option value="/delete/6">6</option>
-                <option value="/delete/7">7</option>
-                <option value="/delete/8">8</option>
-                <option value="/delete/9">9</option>
-                <option value="/delete/10">10</option>
-                <option value="/delete/11">11</option>
-                <option value="/delete/12">12</option>
-                <option value="/delete/13">13</option>
-                <option value="/delete/14">14</option>
-                <option value="/delete/15">15</option>
-                <option value="/delete/16">16</option>
-                <option value="/delete/17">17</option>
-                <option value="/delete/18">18</option>
-                <option value="/delete/19">19</option>
-                <option value="/delete/20">20</option>
-                <option value="/delete/21">21</option>
-                <option value="/delete/22">22</option>
-                <option value="/delete/23">23</option>
-                <option value="/delete/24">24</option>
-                <option value="/delete/25">25</option>
-                <option value="/delete/26">26</option>
-                <option value="/delete/27">27</option>
-                <option value="/delete/28">28</option>
-                <option value="/delete/29">29</option>
-                <option value="/delete/30">30</option>
-            </select>
-    </div>
+<style>
 
+    input[type=text] {
+      padding: 2px;
+      margin:auto;
+    
+    }
+      
+    
+    
+    .button {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      height:auto;
+      width:auto;
+    }
+    
+    .button:hover, .button:focus {
+      background-color: #89d0ee;
+    }
+    
+    #myInput {
+      box-sizing: border-box;
+      background-image: url('searchicon.png');
+      background-position: 14px 12px;
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 14px 20px 12px 45px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #myInput:focus {outline: 3px solid #ddd;}
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f6f6f6;
+      min-width: 230px;
+      max-height:400px;
+      overflow:auto; 
+      border: 1px solid #ddd;
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 10px 18px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(180deg, #1b6b9e 0%, #89d0ee 99%);
+        box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        border-radius: 100px;
+    }
+    
+    .dropdown-content::-webkit-scrollbar {
+      width: 20px;
+    }
+    
+    .dropdown-content::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 100px;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .hidden {
+      overflow: auto;
+    }
+    
+    a {
+      font-size: 24px;
+    }
+    
+    .show {display: block;}
+    </style>
+
+<div class = "container">
+    <h1>Choose a task to delete</h1>
+    <p>Click on the button to open the dropdown menu, and use the input field to search for a specific task.</p>
+  </div>
+  
+  <br>
+    
+
+<div class="dropdown">
+    <button onclick="myFunction()" class="button">Select Task</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="/delete/1">1</a>
+      <a href="/delete/2">2</a>
+      <a href="/delete/3">3</a>
+      <a href="/delete/4">4</a>
+      <a href="/delete/5">5</a>
+      <a href="/delete/6">6</a>
+      <a href="/delete/7">7</a>
+      <a href="/delete/8">8</a>
+      <a href="/delete/9">9</a>
+      <a href="/delete/10">10</a>
+      <a href="/delete/11">11</a>
+      <a href="/delete/12">12</a>
+      <a href="/delete/13">13</a>
+      <a href="/delete/14">14</a>
+      <a href="/delete/15">15</a>
+      <a href="/delete/16">16</a>
+      <a href="/delete/17">17</a>
+      <a href="/delete/18">18</a>
+      <a href="/delete/19">19</a>
+      <a href="/delete/20">20</a>
+      <a href="/delete/21">21</a>
+      <a href="/delete/22">22</a>
+      <a href="/delete/23">23</a>
+      <a href="/delete/24">24</a>
+      <a href="/delete/25">25</a>
+      <a href="/delete/26">26</a>
+      <a href="/delete/27">27</a>
+      <a href="/delete/28">28</a>
+      <a href="/delete/29">29</a>
+      <a href="/delete/30">30</a>
+    </div>
+  </div>
+  
 
 <br>
-<input type="submit" name="submit"  title="Confirm delete item choice"  class="saveButtonSmall" value="Submit" onclick="go()">
-
- 
-
+  
 <script>
-
-function go() {
-window.location=document.getElementById("UserSelect").value
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
 </script>

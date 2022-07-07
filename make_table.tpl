@@ -46,13 +46,12 @@ input[type=text] {
         </form>
 
     </div>
-
     <div class = "container">
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tasks.." title="Type in a task">
 
 
-    <table class = border = 1 id="myTable">
+    <table class = "hover" border = 1 id="myTable">
     <th>#Num</th>
 
     <th>Description</th>
@@ -102,6 +101,29 @@ function myFunction() {
 </script>
 
 <style>
+
+
+    table.hover{
+        border-radius: 2px;
+    }
+
+  	.hover{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hover td{ 
+		padding:7px; border:#acbdd3 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hover tr{
+		background: #f0f5fc;
+	}
+	/* Define the hover highlight color for the table row */
+    .hover tr:hover {
+          background-color: #d5f0ff;
+    }
+
+
     .container h1 {
         background-color: white;
         border-radius: 10px;
@@ -124,7 +146,6 @@ function myFunction() {
         border: 4px solid #000000;
         border-radius: 15px;
         position: relative;
-        border-collapse: collapse;
     }
     
     table tr {
