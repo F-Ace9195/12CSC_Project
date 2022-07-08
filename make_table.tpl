@@ -50,22 +50,24 @@ input[type=text] {
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tasks.." title="Type in a task">
 
+        <div>
 
-    <table class = "hover" border = 1 id="myTable">
-    <th>#Num</th>
 
-    <th>Description</th>
+            <table class = "hover" id="myTable">
+            <th>#Num</th>
 
-    %for row in rows:
-    <tr>
-    %for col in row:
-    <td>{{col}}</td>
-    %end
-    </tr>
-    %end
-    </table>
+            <th>Description</th>
 
-    </div>
+            %for row in rows:
+            <tr>
+            %for col in row:
+            <td>{{col}}</td>
+            %end
+            </tr>
+            %end
+            </table>
+
+        </div>
 
 </body>
 
@@ -103,9 +105,21 @@ function myFunction() {
 <style>
 
 
-    table.hover{
-        border-radius: 2px;
+    .hover::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(180deg, #1b6b9e 0%, #89d0ee 99%);
+        box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
     }
+
+    .hover::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    .hover {
+        background-color: #e4e4e4;
+        border-radius: 100px;
+    }
+
+
 
   	.hover{
 		width:100%; 
@@ -136,15 +150,38 @@ function myFunction() {
         margin-right: auto;
         margin-top: 10px;
         width: 80%;
+        overflow:auto; 
+        max-height: 750px;
 
     }
 
     table {
+        border-collapse:separate;
+        border:solid black 1px;
+        border-radius:6px;
+    }
+
+    td, th {
+        border-left:solid black 1px;
+        border-top:solid black 1px;
+    }
+
+    th {
+        background-color: blue;
+        border-top: none;
+    }
+
+    td:first-child, th:first-child {
+        border-left: none;
+    }
+
+    table {
+        -moz-border-radius: 5px !important;
         width: 100%;
         margin-top: 10px;
         border-collapse: collapse;
-        border: 4px solid #000000;
-        border-radius: 15px;
+        border: solid 3px #000000;
+        border-radius: 5px;
         position: relative;
     }
     
@@ -182,6 +219,7 @@ function myFunction() {
 
     td:first-child, th:first-child {
      border-left: none;
+     
     }
     
 

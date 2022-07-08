@@ -95,6 +95,18 @@ table {
   transform: translateY(4px);
 }
 
+html::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+html::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+html::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
 .container {
   font-family: Product Sans;
   padding: 15px;
